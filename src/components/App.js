@@ -1,6 +1,8 @@
 <p>Now I can render any React component on any DOM node I want using ReactDOM.render</p>
 import React, { useState } from 'react'
 import '../styles/App.css'
+import ReactMarkdown from "react-markdown";
+//import remarkGfm from "remark-gfm";
 const App = () => {
     const [input,setinput]=useState('');
     const handlechange=(e)=>{
@@ -15,9 +17,12 @@ const App = () => {
 <textarea className='textarea' onChange={handlechange} type='text' placeholder='type here...' />
 </div>
 <div className='preview'>
-    <h1 className='Loading'>{input}</h1>
-    <div className='Loading'></div>
+    {/* <h1 className='Loading'>{input}</h1> */}
+    <div className='Loading'>   <ReactMarkdown>
+          {input}
+        </ReactMarkdown></div>
 </div>
+
     </div>
   )
 }
