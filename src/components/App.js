@@ -10,12 +10,13 @@ const App = () => {
     }
   return (
     <div className='app'>
-<div className='textarea'>
+<div className='input'>
 {/* <input onChange={handlechange} className='Loading' type='text' placeholder='Type Here' /> */}
-<textarea className='Loading' onChange={handlechange} type='text' placeholder='type here...' />
+<textarea className='textarea' onChange={handlechange} type='text' placeholder='type here...' />
 </div>
 <div className='preview'>
-{input}
+    <h1 className='Loading'>{input}</h1>
+    <div className='Loading'></div>
 </div>
     </div>
   )
